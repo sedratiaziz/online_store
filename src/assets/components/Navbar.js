@@ -60,7 +60,7 @@ function Navbar() {
       <div className="container">
         <div className="px-lg-4 d-flex justify-content-center align-items-center">
           <a href="#sec1" className="navbar-brand">
-            <span id="brand">Riyadh Shagera</span>
+            <span id="brand">Bazaria</span>
           </a>
         </div>
 
@@ -92,13 +92,31 @@ function Navbar() {
               style={liStyle}
               className="nav-item px-4 pt-4 py-3 py-sm-4 py-md-2"
             >
-              <a href="#be_prepared" style={linkStyle}>! اربطو الأحزمة</a>
+              <a href="#be_prepared" style={linkStyle}>العروض</a>
             </li>
             <li
               style={liStyle}
-              className="nav-item px-5 pb-4 py-3 py-sm-4 py-md-2"
+              className="nav-item px-4 pt-4 py-3 py-sm-4 py-md-2"
             >
-              <a href="#Categories" style={linkStyle}>حساباتي</a>
+              <a href="#be_prepared" style={linkStyle}>عربة التسوق</a>
+            </li>
+            <li
+              style={liStyle}
+              className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
+            >
+              <a href="#Categories" style={linkStyle}>تسجيل الدخول</a>
+            </li>
+            <li
+              style={liStyle}
+              className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
+            >
+              <a href="#Categories" style={linkStyle}>اللغة</a>
+            </li>
+            <li
+              style={liStyle}
+              className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
+            >
+              <a href="#Categories" style={linkStyle}>الإعدادات</a>
             </li>
             {/* <!--<li className="nav-item px-2 py-sm-2 py-md-2">
             <Link to={"/Feedback"} className="nav-link">لديك ملاحظات؟</Link>
