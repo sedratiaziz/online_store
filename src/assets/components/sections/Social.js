@@ -1,9 +1,9 @@
 import React from 'react';
-
-import youtubeLong from '../../img/youtubelong.png';
-import snapchat from '../../img/snapchat.png';
-import x from '../../img/x.png'; 
-import telegram from '../../img/telegram.png';
+import { Link } from 'react-router-dom';
+import youtubeLong from '../../img/car.svg';
+import snapchat from '../../img/device.svg';
+import x from '../../img/fashion.png'; 
+import telegram from '../../img/plane.svg';
 
 
 function Categ() {
@@ -16,11 +16,11 @@ function Categ() {
                         <div className="card h-100 shadow" id="action">
                             <img alt='anotherimg' src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
                             <div className="card-body">
-                                <h3 className="card-title py-3">سيارات</h3>
+                                <h3 className="card-title py-3">قطع سيارات</h3>
                                 <hr></hr>
-                                <a href="https://www.youtube.com/@Riyadh-787">
+                                <Link to="/404">
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover bn28">انتقل</button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -31,9 +31,9 @@ function Categ() {
                             <div className="card-body">
                                 <h3 className="card-title py-3">إلكترونيات</h3>
                                 <hr></hr>
-                                <a href="https://www.snapchat.com/add/bh.air1?share_id=K3bpO7ysQCM&locale=en-GB">
+                                <Link to="/404">
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover bn25snp">انتقل</button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -42,11 +42,11 @@ function Categ() {
                         <div className="card h-100 shadow" id="action">
                             <img alt='anotherimg' src={x} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
                             <div className="card-body">
-                                <h3 className="card-title py-3">موضة</h3>
+                                <h3 className="card-title py-3">أزياء</h3>
                                 <hr></hr>
-                                <a href="https://x.com/riyadhshagera?t=-G2a3UKOe06FqZZscFhuQQ&s=09">
+                                <Link to="/404">
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover bn25">انتقل</button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -56,11 +56,11 @@ function Categ() {
                         <div className="card h-100 shadow" id="kids">
                             <img alt='anotherimg' src={telegram} id="kids_img" className="card-img-top" />
                             <div className="card-body">
-                                <h3 className="card-title py-3 telegram_h3">ترند</h3>
+                                <h3 className="card-title py-3 telegram_h3">وصل حديثاً</h3>
                                 <hr id="hr_kids"></hr>
-                                <a href="https://t.me/Riyadh787">
+                                <Link to="/404">
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover islamic">انتقل</button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -73,11 +73,11 @@ function Categ() {
                         <div className="card h-100 shadow" id="kids">
                             <img alt='anotherimg' src={telegram} id="sci-fi_img" className="card-img-top" />
                             <div className="card-body">
-                                <h3 className="card-title py-3 telegram_h3">تلقرام</h3>
+                                <h3 className="card-title py-3 telegram_h3">وصل حديثاً</h3>
                                 <hr id="hr_sci-fi"></hr>
-                                <a href="https://t.me/Riyadh787">
+                                <Link to="/404">
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover islamic">انتقل</button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,12 @@
+.h101{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.h111{margin-top: 45vh;}
+
+
 body {
   background: url(./assets/img/bg.svg) no-repeat center center fixed;
   background-size: cover;
@@ -545,10 +554,10 @@ outline: none;
   width: 100px;
 background-image: linear-gradient(
   to right,
-  #3760B4,
-  #4481eb,
+  #00BFA6,
+  #139180,
   #03afe8,
-  #3f86ed
+  #00BFA6
 );
 
 
@@ -713,7 +722,7 @@ font-family: 'TajawalReg', sans-serif;
 .bn632-hover.bn25 {
   background-image: linear-gradient(
     to right,
-    #29323c,
+    #6C63FF,
     #485563,
     #2b5876,
     #4e4376
@@ -725,10 +734,10 @@ font-family: 'TajawalReg', sans-serif;
   width: 100px;
   background-image: linear-gradient(
     to right,
-    #e9c706,
-    #917f1c,
-    #917f1c,
-    #e9c706
+    #00B0FF,
+    #1081b5,
+    #1081b5,
+    #00B0FF
   );
 }
 
@@ -867,6 +876,10 @@ background-image: linear-gradient(
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+#kids_img {
+  height: 14rem;
 }
 
 #docum_img{

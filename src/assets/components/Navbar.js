@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -90,33 +91,33 @@ function Navbar() {
           <ul id="uli" className="navbar-nav text-center ms-auto d-flex align-items-center">
             <li
               style={liStyle}
+              className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
+            >
+              <a href="#Categories" style={linkStyle}>بحث</a>
+            </li>
+            <li
+              style={liStyle}
               className="nav-item px-4 pt-4 py-3 py-sm-4 py-md-2"
             >
-              <a href="#be_prepared" style={linkStyle}>العروض</a>
+              <Link to="/Offers" style={linkStyle}>العروض</Link>
             </li>
             <li
               style={liStyle}
               className="nav-item px-4 pt-4 py-3 py-sm-4 py-md-2"
             >
-              <a href="#be_prepared" style={linkStyle}>عربة التسوق</a>
+              <Link to="/ShoppingCart" style={linkStyle}>عربة التسوق</Link>
             </li>
             <li
               style={liStyle}
               className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
             >
-              <a href="#Categories" style={linkStyle}>تسجيل الدخول</a>
+              <Link to="/LogIn" style={linkStyle}>تسجيل الدخول</Link>
             </li>
             <li
               style={liStyle}
               className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
             >
-              <a href="#Categories" style={linkStyle}>اللغة</a>
-            </li>
-            <li
-              style={liStyle}
-              className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2"
-            >
-              <a href="#Categories" style={linkStyle}>الإعدادات</a>
+              <Link to="/Settings" style={linkStyle}>الإعدادات</Link>
             </li>
             {/* <!--<li className="nav-item px-2 py-sm-2 py-md-2">
             <Link to={"/Feedback"} className="nav-link">لديك ملاحظات؟</Link>

@@ -25,9 +25,9 @@ function Home() {
       <Welcome />
       <Social />
       {/* <BePrepared /> */}
-      <Acc />      
+      {/* <Acc />      
       <Taste />
-      <Categ />      
+      <Categ />       */}
     </>
   );
 }
