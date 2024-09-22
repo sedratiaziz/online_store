@@ -1074,3 +1074,28 @@ body {
   font-family: 'ibmMed', sans-serif;
 }
 
+
+.searchBar {
+    background-color: transparent;
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    width: 200px;
+    padding: 0.5rem;
+    border: solid 3px rgba(49,41,84,255);
+    box-shadow: rgba(49,41,84,255) 5px 5px, rgba(213,58,85,255) 10px 10px, rgba(247, 119, 15) 15px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.1rem;  
+    text-align: center;  
+
+}
+
+
+.searchBar:focus {
+
+}
+
+.searchBar::placeholder {
+  color: rgb(200, 200, 200);
+}
+
