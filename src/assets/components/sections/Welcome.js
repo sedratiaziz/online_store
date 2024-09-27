@@ -4,7 +4,7 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function Welcome() {
+function Welcome(props) {
     return (
         <section className="py-5 text-light d-flex align-items-center" id="sec1">
     <div className="container">
@@ -14,7 +14,7 @@ function Welcome() {
            
             <div className="py-3 d-flex align-items-center justify-content-center" id="sec1_h1">
                 <h1 id="title" className="lh-base text-center">
-                تسوق بذكاء في <span className="title-span">بازاريا</span> 
+                {props.title} <span className="title-span">{props.titleSpan}</span> 
                 </h1>
             </div>
 
@@ -23,29 +23,32 @@ function Welcome() {
                     <h4 className=" px-md-2 px-sm-4 lh-base" id="sec1_h4">
 
                     <br></br>
-                         ! كل ما تحتاجه تحت سقفٍ واحد
+                        {props.subTitle}
                     </h4>
                 </div>
 
                 {/* <!--mobile--> */}
                 <div className="text-center py-4 d-block d-sm-block d-md-none text-center">
                     <h4 id="sec1_mobile">
-                    ! كل ما تحتاجه تحت سقفٍ واحد
+                    {props.subTitleMobile}
                     </h4>
                 </div>
             </div>
+           
 
-            <div className="d-flex flex-column justify-content-between pt-5  d-none d-sm-block d-sm-none d-md-block">
+            {props.arrow}
+            {/* <div className="d-flex flex-column justify-content-between pt-5  d-none d-sm-block d-sm-none d-md-block">
                 <div className="d-flex flex-column text-center pt-5">
                 <FontAwesomeIcon className='arrw' id='arrw_dwn' icon={faAngleDoubleDown} size='2x'/>
                 </div>     
-            </div>
+            </div> */}
             
-                <div className="d-flex flex-column justify-content-between pt-5 d-block d-sm-block d-md-none text-center">
-                    <div className="d-flex flex-column text-center pt-4">
-                    <FontAwesomeIcon className='arrw' id='arrw_dwn' icon={faAngleDoubleDown} size='2x'/>
-                    </div>     
-                </div>
+            {props.arrowMobile}
+            {/* <div className="d-flex flex-column justify-content-between pt-5 d-block d-sm-block d-md-none text-center">
+                <div className="d-flex flex-column text-center pt-4">
+                <FontAwesomeIcon className='arrw' id='arrw_dwn' icon={faAngleDoubleDown} size='2x'/>
+                </div>     
+            </div> */}
     </div>
 
 </section>

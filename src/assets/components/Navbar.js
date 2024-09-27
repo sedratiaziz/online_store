@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
   const [isActive, setIsActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState(""); // Add state for search query
@@ -88,8 +88,8 @@ function Navbar() {
     >
       <div className="container">
         <div className="px-lg-4 d-flex justify-content-center align-items-center">
-          <a href="#sec1" className="navbar-brand">
-            <span id="brand">Bazaria</span>
+          <a href={props.logoLink} className="navbar-brand">
+            <span id="brand">{props.title}</span>
           </a>
         </div>
 
