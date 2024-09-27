@@ -1,4 +1,4 @@
-import React, { Link } from 'react';
+import React from 'react';
 import '../App.css'; // Import your CSS styles
 // In your React component file, e.g., App.js
 import '../assets/fonts/fonts.css';
