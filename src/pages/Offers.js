@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Navbar from '../assets/components/Navbar';
 import Categ from '../assets/components/sections/Categ';
 import Taste from '../assets/components/sections/Taste';
