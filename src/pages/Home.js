@@ -48,10 +48,12 @@ function Home() {
   /* Scroll to the top on component render */
   useEffect(() => {
     window.scrollTo(0, 0);  
+  
+    // Change the tab title when Home component is loaded
+    document.title = "Bazaria | !المكان الأمثل للتسوق";
+
   }, []);
   /* Scroll to the top on component render */
-
-
 
   useScrollAnimation();
   
