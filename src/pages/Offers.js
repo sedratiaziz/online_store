@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import Navbar from '../assets/components/Navbar';
 import Categ from '../assets/components/sections/Categ';
 import Taste from '../assets/components/sections/Taste';
@@ -16,13 +18,28 @@ import oilFilter from '../assets/img/oil_disc.jpeg'
 
 
 export default function Offers() {
+  const location = useLocation();
   //IMPORTANT: ADD IN EVERY COMPONENT THE FOLLOWING CODE:
   /* Scroll to the top on component render */
   useEffect(() => {
     window.scrollTo(0, 0);  
+  
+    // Change the tab title when Home component is loaded
+    document.title = "Bazaria | !المكان الأمثل للتسوق";
+
   }, []);
   /* Scroll to the top on component render */
   
+  useEffect(() => {
+    // Scroll to the element specified in the URL hash
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1)); // Remove the '#' character
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar 
@@ -30,7 +47,7 @@ export default function Offers() {
         logoLink={"/"}
       />
 
-      <section className="py-5 text-light d-flex align-items-center" id="sec1">
+      <section className="py-5 text-light d-flex align-items-center sec1" id="">
         <div className="container">
           <div className="py-4 d-flex align-items-evenly justify-content-center flex-column pt-5">
             <div className="py-3 d-flex align-items-center justify-content-center" id="sec1_h1">
@@ -61,6 +78,8 @@ export default function Offers() {
       </section>
 
       <Categ 
+        id="most_selling_offerpg"
+
         mainTitle={"الأكثر مبيعا"}
 
         src1={ribon}
@@ -106,6 +125,8 @@ export default function Offers() {
       />
 
       <Categ 
+      id="products_offerpg" 
+
         src1={oilFilter}
         src2={blender}
         src3={asus}

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Welcome(props) {
     return (
-        <section className="py-5 text-light d-flex align-items-center" id="sec1">
+        <section className="py-5 text-light d-flex align-items-center sec1" id={`${props.id}`}>
     <div className="container">
 
 

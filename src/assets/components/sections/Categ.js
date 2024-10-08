@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Categ(props) {    
     return (
-    <section id="Categories" class="py-5">
+    <section id={`${props.id}`} class="py-5">
         <div class="container">   
             <h2 className='h1000 text-center pb-5 MostSellingH1'>{props.mainTitle}</h2>
             <div className="row row-whith-wide-cards d-flex justify-content-center text-center py-0 py-md-2 py-lg-2">            

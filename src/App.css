@@ -26,7 +26,7 @@ body {
   font-family: 'ibmReg', sans-serif;
 }
 
-#sec1 {
+.sec1 {
   height: 100vh; /* Fallback for browsers that handle vh correctly */
   height: calc(var(--vh, 1vh) * 100);
 }
@@ -1265,3 +1265,20 @@ body {
     scroll-snap-type: y mandatory;
   }
 } */
+
+
+/* LogIn.css or your global stylesheet */
+.highlight {
+  background-color: yellow;  /* or any color to make the matched text pop */
+  font-weight: bold;
+}
+
+
+
+#bazariaImgLink {
+  text-decoration: none;
+  color: black;
+}
+#bazariaImgLink:hover {
+  text-decoration: none;
+}

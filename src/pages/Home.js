@@ -62,6 +62,7 @@ function Home() {
       <Header />
       <Navbar title={"Bazaria"} />      
       <Welcome 
+      id={"think_creative"}
       title={"تسوق بذكاء في"}
       titleSpan={"بازاريا"}
       subTitle={"! كل ما تحتاجه تحت سقفٍ واحد"}
@@ -71,6 +72,8 @@ function Home() {
       />
             
       <Categ 
+        id="what_makes_us_unique"
+
         mainTitle={"ماذا يميز بازاريا؟"}
         src1={bh}
         src2={formula}
@@ -107,8 +110,12 @@ function Home() {
       <Taste 
         title={"قائمة الأصناف و المنتجات"}
       />
-      <Social />
+      <Social
+      id="products_and_categories"
+      />
       <Categ 
+        id="most_selling"
+
         mainTitle={"الأكثر مبيعا"}
 
         src1={ribon}

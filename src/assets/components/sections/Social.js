@@ -6,9 +6,9 @@ import x from '../../img/fashion.png';
 import telegram from '../../img/plane.svg';
 
 
-function Categ() {
+function Categ(props) {
     return (
-        <section id="Categories" className="py-5">
+        <section id={`${props.id}`} className="py-5">
             <div className="container">
                 {/* FIRST ROW */}
                 <div className="row d-flex justify-content-center row-whith-wide-cards text-center pt-4 py-md-2 py-lg-2">

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar(props) {
   const [isActive, setIsActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [searchQuery, setSearchQuery] = useState(""); // Add state for search query
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -50,34 +49,109 @@ function Navbar(props) {
     display: isScrolled ? 'block' : 'none',
     padding: '10px 15px',
   };
- 
 
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate(); // To programmatically navigate between pages
 
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
 
-  //SEEARCHING ALGORITHM
-  const items = [
-    { id: 1, name: 'item one' },
-    { id: 2, name: 'item two' },
-    { id: 3, name: 'item three' },
-    { id: 4, name: 'bazaar item' },
-  ];
   const handleSearch = (e) => {
-    e.preventDefault();
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      performSearch(searchQuery.toLowerCase());
+    }
+  };
+
+
   
-    if (searchQuery.trim()) {
-      const filteredItems = items
-        .filter(item => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
-        .map(item => item.name); // Extract only the name property
+  const performSearch = (query) => {
+    //Search Data
+    const elements = [
+      //pages
+      { id: 'العروض', page: '/Offers' },
+      { id: 'عربة التسوق', page: '/ShoppingCart' },
+      { id: 'عربة', page: '/ShoppingCart' },      
+      { id: 'تسجيل الدخول', page: '/LogIn' },
+      { id: 'تسجيل', page: '/LogIn' },
+      { id: 'الحساب', page: '/LogIn' },
+      { id: 'حسابي', page: '/LogIn' },
+      { id: 'ملف', page: '/LogIn' },
+      { id: 'ملفي', page: '/LogIn' },
+      { id: 'اعدادات', page: '/Settings' },
+      { id: 'الرئيسية', page: '/' },
+      { id: 'منتجات', page: '#think_creative' },
+
+/*
+      { id: 'تسوق', page: '/think_creative' },
+      { id: 'بذكاء', page: '/think_creative' },
+      { id: 'بازاريا', page: '/think_creative' },
+      { id: 'سقف', page: '/think_creative' },
+      { id: 'الرئيسية', page: '/think_creative' },
+
+      { id: 'الذكاء', page: '/#what_makes_us_unique' },
+      { id: 'الاصطناعي', page: '/#what_makes_us_unique' },
+      { id: 'توصيل', page: '/#what_makes_us_unique' },
+      { id: 'صاروخ', page: '/#what_makes_us_unique' },
+      { id: 'بحرين', page: '/#what_makes_us_unique' },
+      { id: 'محلي', page: '/#what_makes_us_unique' },
+      { id: 'اقتصاد', page: '/#what_makes_us_unique' },
+      { id: 'دعم', page: '/#what_makes_us_unique' }
+*/  
+    ];
   
-      if (filteredItems.length > 0) {
-        alert(filteredItems); // Display matched items
+    //Search Logic
+    const levenshteinDistance = (a, b) => {
+      const matrix = Array.from({ length: a.length + 1 }, () => []);
+      for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+      for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+  
+      for (let i = 1; i <= a.length; i++) {
+        for (let j = 1; j <= b.length; j++) {
+          const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j] + 1, 
+            matrix[i][j - 1] + 1, 
+            matrix[i - 1][j - 1] + cost
+          );
+        }
+      }
+      return matrix[a.length][b.length];
+    };
+  
+
+    //Scroll Code
+    const elementOnCurrentPage = document.getElementById(query);
+    
+    if (elementOnCurrentPage) {
+      // Scroll to the element on the current page
+      elementOnCurrentPage.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      const match = elements.reduce((bestMatch, element) => {
+        const distance = levenshteinDistance(query.toLowerCase(), element.id.toLowerCase());
+        if (distance <= 2 && (!bestMatch || distance < bestMatch.distance)) {
+          return { ...element, distance };
+        }
+        return bestMatch;
+      }, null);
+  
+      if (match) {
+        // Navigate to the page
+        navigate(match.page);
+        setTimeout(() => {
+          const matchedElement = document.getElementById(match.id);
+          if (matchedElement) {
+            matchedElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100); // Small delay to ensure the page is fully rendered before scrolling
       } else {
-        alert("Couldn't find your items :("); // No items matched
+        alert('Item not found!');
       }
     }
   };
   
-
+  
   
 
   return (
@@ -109,8 +183,8 @@ function Navbar(props) {
         <div className={`collapse navbar-collapse ${isActive ? 'show' : ''}`} id="mainmenu">
           <ul id="uli" className="navbar-nav text-center ms-auto d-flex align-items-center">
             <li style={liStyle} className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2">
-              <form onSubmit={handleSearch}>
-                <input type="text" placeholder="!ابحث عن أي شي" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="searchBar mx-lg-5 mb-lg-1 " />                
+              <form onSubmit={handleSearchChange}>
+                <input type="text" placeholder="!ابحث عن أي شي" value={searchQuery} onChange={handleSearchChange} onKeyDown={handleSearch} className="searchBar mx-lg-5 mb-lg-1 " />
               </form>
             </li>
             <li style={liStyle} className="nav-item px-4 pt-4 py-3 py-sm-4 py-md-2">
@@ -123,7 +197,7 @@ function Navbar(props) {
               <Link to="/LogIn" style={linkStyle}>تسجيل الدخول</Link>
             </li>
             <li style={liStyle} className="nav-item px-4 pb-4 py-3 py-sm-4 py-md-2">
-              <Link to="/Settings" style={linkStyle}>الإعدادات</Link>
+              <Link to="/Settings" style={linkStyle}>إعدادات</Link>
             </li>
           </ul>
         </div>
