@@ -23,7 +23,7 @@ export default function Settings() {
         src2={OrderTracking}
         src3={language}
 
-        cardTitle1={t("Profile")}
+        cardTitle1={t("Proqfile")}
         cardP1={t("")}
         btn1Body={t("awesome")}
         btn1Style="bn25c"
