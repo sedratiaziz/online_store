@@ -1,0 +1,65 @@
+/* src/assets/fonts/fonts.css */
+
+/* IBM Plex Sans Arabic Regular */
+@font-face {
+  font-family: 'ibmReg';
+  src: url('./IBM/IBMPlexSansArabic-Regular.ttf') format('truetype');       
+}
+
+/* IBM Plex Sans Arabic Bold */
+@font-face {
+  font-family: 'ibmBold';
+  src: url('./IBM/IBMPlexSansArabic-Bold.ttf') format('truetype');       
+  font-weight: bold;  
+}
+
+/* IBM Plex Sans Arabic SemiBold */
+@font-face {
+  font-family: 'ibmSemBold';
+  src: url('./IBM/IBMPlexSansArabic-SemiBold.ttf') format('truetype');       
+  font-weight: normal;
+}
+
+/* IBM Plex Sans Arabic medium */
+@font-face {
+  font-family: 'ibmMed';
+  src: url('./IBM/IBMPlexSansArabic-Medium.ttf') format('truetype');       
+  
+}
+
+
+/*IBM Plex Sans Arabic Light*/
+@font-face {
+  font-family: 'ibmLight';
+  src: url('./IBM/IBMPlexSansArabic-Light.ttf') format('truetype');       
+}
+
+
+
+/*lobster */
+@font-face {
+  font-family: 'lobsterTwoReg';
+  src: url('./lobsterTwo/LobsterTwo-Regular.ttf') format('truetype');         
+}
+
+
+
+/*Tajawal Reg */
+@font-face {
+  font-family: 'TajawalReg';
+  src: url('./tajawal/Tajawal-Regular.ttf') format('truetype');         
+}
+
+/*Tajawal Bold */
+@font-face {
+  font-family: 'TajawalMed';
+  src: url('./tajawal/Tajawal-Medium.ttf') format('truetype');         
+}
+
+/*Tajawal Bold */
+@font-face {
+  font-family: 'TajawalBold';
+  src: url('./tajawal/Tajawal-Bold.ttf') format('truetype');         
+}
+
+
