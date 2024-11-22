@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import Navbar from '../assets/components/Navbar';
 import Categ from '../assets/components/sections/Categ';
@@ -17,8 +18,10 @@ import oilFilter from '../assets/img/oil_disc.jpeg'
 
 
 
+
 export default function Offers() {
   const location = useLocation();
+  const { t } = useTranslation();
   //IMPORTANT: ADD IN EVERY COMPONENT THE FOLLOWING CODE:
   /* Scroll to the top on component render */
   useEffect(() => {
@@ -43,8 +46,13 @@ export default function Offers() {
   return (
     <>
       <Navbar 
-        title={'Bazaria'}
-        logoLink={"/"}
+      logoLink={"/"}
+      title={t("BazariaNav")}
+      searchPlaceHolder={t("searchPlaceHolder")}
+      offers={t("offers")}
+      shoppingCart={t("shoppingCart")}
+      logIn={t("logIn")}
+      settings={t("settings")}
       />
 
       <section className="py-5 text-light d-flex align-items-center sec1" id="">

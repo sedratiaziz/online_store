@@ -1,18 +1,18 @@
 import React from 'react'
-import Categ from '../assets/components/sections/Categ'
+import Categ from '../../assets/components/sections/Categ'
 
-import '../locales/i18n';
+import '../../locales/i18n';
 import { useTranslation } from 'react-i18next';
 
-import profilePic from '../assets/img/profile.png'
-import OrderTracking from '../assets/img/Mohamed_a_Rahman.png'
-import language from '../assets/img/language.png'
-import payment from '../assets/img/payment.png'
-import Notifications from '../assets/img/bell.png'
-import Dashboard from '../assets/img/sellerDashboard.svg'
-import Navbar from '../assets/components/Navbar'
+import profilePic from '../../assets/img/profile.png'
+import OrderTracking from '../../assets/img/Mohamed_a_Rahman.png'
+import language from '../../assets/img/language.png'
+import payment from '../../assets/img/payment.png'
+import Notifications from '../../assets/img/bell.png'
+import Dashboard from '../../assets/img/sellerDashboard.svg'
+import Navbar from '../../assets/components/Navbar'
 
-export default function Settings() {
+export default function Payment() {
   const { t } = useTranslation();
   
   return (
@@ -49,9 +49,9 @@ export default function Settings() {
         btn3Body={t("goToSetting")}
         btn3Style="bn25turqoise"
 
-        link1="/Settings/Profile"
-        link2="/Settings/Orders"
-        link3="/Settings/Language"
+        link1="/"
+        link2="/"
+        link3="/"
         showFavoriteButton={false}
       /> 
       <Categ 
@@ -76,9 +76,9 @@ export default function Settings() {
         btn3Body={t("goToSetting")}
         btn3Style="bn25l"
 
-        link1="/Settings/Payment"
-        link2="/Settings/Notifications"
-        link3="/Settings/Dashboard"
+        link1="/"
+        link2="/"
+        link3="/"
         showFavoriteButton={false}
       />
     </>     

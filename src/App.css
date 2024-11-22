@@ -796,6 +796,33 @@ font-family: 'TajawalReg', sans-serif;
   font-family: 'TajawalReg', sans-serif;
   }
 
+  /*language button in Settings page */
+.bn632-hover.bn25turqoise {
+  background-image: linear-gradient(
+    45deg,
+    #00887a,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
+  
+  font-family: 'TajawalReg', sans-serif;
+  }
+ 
+ 
+  /*notifications button in Settings page */
+.bn632-hover.bn25red {
+  background-image: linear-gradient(
+    45deg,
+    #b53206,
+    #bd7d7d,
+    #2b5876,
+    #4e4376
+  );
+  
+  font-family: 'TajawalReg', sans-serif;
+  }
+
 
 
 .bn632-hover {

@@ -41,5 +41,24 @@
   "product2Details": "القطع المتبقية: 12 | التقييمات: 10/7",
   "product3Title": "أبل إيربودز برو 2",
   "product3Description": "محرك مخصص بتمدد عالٍ من تصميم Apple مع مضخم صوت مخصص بنطاق ديناميكي عالٍ وميزة إلغاء الضجيج النشط.",
-  "product3Details": "القطع المتبقية: 15 | التقييمات: 10/8"
+  "product3Details": "القطع المتبقية: 15 | التقييمات: 10/8",
+
+  "profile": "حسابي",
+  "orderHistory": "طلباتي",
+  "language": "اللغة",
+  "payment": "طرق الدفع",
+  "notifications": "الإشعارات",
+  "dashboard": "لوحة تحكم البائع",
+  "profileDescription": "تحديث معلومات حسابك، تغيير كلمة المرور، إضافة عنوان التوصيل",
+  "orderHistoryDescription": "عرض وتتبع حالة طلباتك السابقة والحالية",
+  "languageDescription": "اختر لغتك المفضلة لتصفح بازاريا",
+  "paymentMethodsDescription": "إدارة وتحديث خيارات الدفع المحفوظة لديك بأمان",
+  "notificationsDescription": "تخصيص إعدادات الإشعارات للعروض والتحديثات والطلبات",
+  "dashboardDescription": "الوصول إلى الأدوات والتحليلات لإدارة حسابك ومنتجاتك المعروضة",
+  "goToSetting": "انتقل",
+  
+
+  "arabic": "العربية",
+  "english": "English",
+  "french": "Français"
 }

@@ -18,11 +18,11 @@ function Categ(props) {
                             {props.show_cardP1_detail && (
                                 <p id="pcomplt1" className="card-text pt-3 px-4 px-sm-4 px-md-4 px-lg-4">{props.cardP1_detail}</p>
                             )}
-                            <Link to={`/${props.link1}`}>
+                            <Link to={`${props.link1}`}>
                                 <button style={{ fontSize: "1.1rem" }} className={`bn632-hover ${props.btn1Style}`}>{props.btn1Body}</button>
                             </Link>
                             {props.showFavoriteButton && (
-                                <Link to={`/${props.fvrtLink1}`}>
+                                <Link to={`${props.fvrtLink1}`}>
                                     <button style={{ fontSize: "1.1rem" }} className={`bn632-hover ${props.btn1StyleFvrt}`}>{props.btn1BodyFvrt}</button>
                                 </Link>
                             )}
@@ -40,11 +40,11 @@ function Categ(props) {
                             {props.show_cardP2_detail && (
                                 <p id="pcomplt1" className="card-text pt-3 px-4 px-sm-4 px-md-4 px-lg-4">{props.cardP2_detail}</p>
                             )}
-                            <Link to={`/${props.link2}`}>
+                            <Link to={`${props.link2}`}>
                                 <button style={{ fontSize: "1.1rem" }} className={`bn632-hover ${props.btn2Style}`}>{props.btn2Body}</button>
                             </Link>
                             {props.showFavoriteButton && (
-                                <Link to={`/${props.fvrtLink2}`}>
+                                <Link to={`${props.fvrtLink2}`}>
                                     <button style={{ fontSize: "1.1rem" }} className={`bn632-hover ${props.btn2StyleFvrt}`}>{props.btn2BodyFvrt}</button>
                                 </Link>
                             )}
@@ -62,11 +62,11 @@ function Categ(props) {
                             {props.show_cardP3_detail && (
                                 <p id="pcomplt1" className="card-text pt-3 px-4 px-sm-4 px-md-4 px-lg-4">{props.cardP3_detail}</p>
                             )}
-                            <Link to={`/${props.link3}`}>
+                            <Link to={`${props.link3}`}>
                                 <button style={{ fontSize: "1.1rem" }} className={`bn632-hover ${props.btn3Style}`}>{props.btn3Body}</button>
                             </Link>
                             {props.showFavoriteButton && (
-                                <Link to={`/${props.fvrtLink3}`}>
+                                <Link to={`${props.fvrtLink3}`}>
                                     <button style={{ fontSize: "1.1rem" }} className={`bn632-hover ${props.btn3StyleFvrt}`}>{props.btn3BodyFvrt}</button>
                                 </Link>
                             )}
