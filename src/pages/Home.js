@@ -99,7 +99,7 @@ function Home() {
         link2="/"
         link3="/"
         showFavoriteButton={false}
-      />كظك
+      />
 
       <Taste 
         title={t("productAndCategories")}
