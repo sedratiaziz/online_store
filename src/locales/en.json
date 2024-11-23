@@ -6,6 +6,8 @@
   "logIn": "Log in",
   "settings": "Settings",
 
+  "goToSetting": "Choose",
+
   "BazariaTitle": "Bazaria",
   "pageTitle": "Bazaria | The Ultimate Shopping Experience!",
   "shopSmart": "Shop Smart at",
@@ -30,6 +32,8 @@
   "thirdCardButton": "Browse",
   "fourthCardTitle": "New Arrivals",
   "fourthCardButton": "Browse",
+  "fourthCardMdTitle": "New Arrivals",
+  "fourthCardMdButton": "Browse",
 
   "mostSelling": "Best Sellers",
   "product1Title": "Raybon 02 American",

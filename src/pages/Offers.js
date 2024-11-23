@@ -1,31 +1,26 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import Navbar from '../assets/components/Navbar';
-import Categ from '../assets/components/sections/Categ';
-import Taste from '../assets/components/sections/Taste';
+import Navbar from "../assets/components/Navbar";
+import Categ from "../assets/components/sections/Categ";
+import Taste from "../assets/components/sections/Taste";
 
+import ribon from "../assets/img/ribon.jpeg";
+import royalBlueTshirt from "../assets/img/royalblueTshirt.png";
+import airpods from "../assets/img/airpods.jpg";
 
-import ribon from '../assets/img/ribon.jpeg';
-import royalBlueTshirt from '../assets/img/royalblueTshirt.png'
-import airpods from '../assets/img/airpods.jpg';
+import asus from "../assets/img/asus_disc.png";
+import blender from "../assets/img/blender_disc.jpeg";
+import oilFilter from "../assets/img/oil_disc.jpeg";
 
-import asus from '../assets/img/asus_disc.png'
-import blender from '../assets/img/blender_disc.jpeg'
-import oilFilter from '../assets/img/oil_disc.jpeg'
+import rolexYM from "../assets/img/rolexYM.png";
+import gaming_chair from "../assets/img/gaming_chair.jpg";
+import monitor from "../assets/img/monitor.jpg";
 
-import rolexYM from '../assets/img/rolexYM.png'
-import gaming_chair from '../assets/img/gaming_chair.jpg'
-import monitor from '../assets/img/monitor.jpg'
-
-import rayban from '../assets/img/rayban.jpg'
-import rubiks from '../assets/img/rubiks.jpg'
-//import monitor from '../assets/img/monitor.jpg'
-
-
-
-
+import rayban from "../assets/img/rayban.jpg";
+import rubiks from "../assets/img/rubiks.jpg";
+import logitech_kbd from "../assets/img/logitech_kbd.jpg";
 
 export default function Offers() {
   const location = useLocation();
@@ -33,20 +28,19 @@ export default function Offers() {
   //IMPORTANT: ADD IN EVERY COMPONENT THE FOLLOWING CODE:
   /* Scroll to the top on component render */
   useEffect(() => {
-    window.scrollTo(0, 0);  
-  
+    window.scrollTo(0, 0);
+
     // Change the tab title when Home component is loaded
     document.title = "Bazaria | !المكان الأمثل للتسوق";
-
   }, []);
   /* Scroll to the top on component render */
-  
+
   useEffect(() => {
     // Scroll to the element specified in the URL hash
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1)); // Remove the '#' character
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
@@ -86,7 +80,7 @@ export default function Offers() {
             </div>
 
             <div className="pt-5 pt-lg-5 mt-lg-3 pt-md-3 pt-sm-3 text-center">
-              <a href="#Categories">
+              <a href="#most_selling_offerpg">
                 <button
                   id="salesbtn"
                   className={`bn632-hoversales bn25sales`}
@@ -130,9 +124,9 @@ export default function Offers() {
         btn3BodyFvrt={"إضافة للمفضلة"}
         btn3Style={"bn25c"}
         btn3StyleFvrt={"bn24"}
-        link1="/concorde"
-        link2="/budget-airlines"
-        link3="/flight-record"
+        link1="/ShoppingCart"
+        link2="/ShoppingCart"
+        link3="/ShoppingCart"
         showFavoriteButton={true}
       />
 
@@ -168,8 +162,8 @@ export default function Offers() {
         btn3Style={"bn25c"}
         btn3StyleFvrt={"bn24"}
         link1="/concorde"
-        link2="/budget-airlines"
-        link3="/flight-record"
+        link2="/ShoppingCart"
+        link3="/ShoppingCart"
         showFavoriteButton={true}
       />
 
@@ -177,7 +171,7 @@ export default function Offers() {
         mainTitle={""}
         src1={rayban}
         src2={rubiks}
-        src3={airpods}
+        src3={logitech_kbd}
         cardTitle1="نظارة راي بان شمسية"
         cardP1="نظارات راي بان، تصميم كلاسيكي وأنيق مع حماية مثالية من الشمس. خيارك المثالي للأناقة والجودة!"
         cardP1_detail="القطع المتبقية: 3 | التقييمات: 10/9.5"
@@ -194,17 +188,17 @@ export default function Offers() {
         btn2BodyFvrt={"إضافة للمفضلة"}
         btn2Style={"bn25c"}
         btn2StyleFvrt={"bn24"}
-        cardTitle3="أبل إيربودز برو 2"
-        cardP3="محرك مخصص بتمدد عالٍ من تصميم Apple مع مضخم صوت مخصص بنطاق ديناميكي عالٍ وميزة إلغاء الضجيج النشط."
-        cardP3_detail="القطع المتبقية: نفدت الكمية | التقييمات: 10/8"
+        cardTitle3="كيبورد لوجيتيك جي برو "
+        cardP3="كيبورد ميكانيكي متوفر بتقنية ار جي بي لالوان رائعة، جودة لا توصف وإحساس مدهش أثناء اللعب"
+        cardP3_detail="القطع المتبقية: نفدت الكمية | التقييمات: 10/6"
         show_cardP3_detail={true}
         btn3BodyFvrt={"إضافة للمفضلة"}
-        btn3Body="299$"
+        btn3Body="99.90$"
         btn3Style={"bn25c"}
         btn3StyleFvrt={"bn24"}
         link1="/concorde"
-        link2="/budget-airlines"
-        link3="/flight-record"
+        link2="/ShoppingCart"
+        link3="/ShoppingCart"
         showFavoriteButton={true}
       />
 
@@ -238,8 +232,8 @@ export default function Offers() {
         btn3Style={"bn25c"}
         btn3StyleFvrt={"bn24"}
         link1="/concorde"
-        link2="/budget-airlines"
-        link3="/flight-record"
+        link2="/ShoppingCart"
+        link3="/ShoppingCart"
         showFavoriteButton={true}
       />
     </>

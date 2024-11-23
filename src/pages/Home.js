@@ -119,7 +119,8 @@ function Home() {
       
       fourthCardTitle={t("fourthCardTitle")}
       fourthCardButton={t("fourthCardButton")}
-      
+      fourthCardMdTitle={t("fourthCardMdTitle")}
+      fourthCardMdButton={t("fourthCardMdButton")}
 
       />
 
