@@ -25,33 +25,14 @@ import logitech_kbd from "../assets/img/logitech_kbd.jpg";
 import visionpro from "../assets/img/visionpro.jpg";
 import gamepass from "../assets/img/gamepass.jpg";
 import roadkit from "../assets/img/roadkit.jpg";
+import StickySliderButton from "../assets/components/StickySliderButton";
 
 
-const StickyButton = ({ onClick }) => {
-  const buttonStyle = {
-    position: 'fixed',
-    bottom: '20px',
-    right: '20px',
-    backgroundColor: '#007BFF',
-    color: 'white',
-    border: 'none',
-    padding: '10px 20px',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    zIndex: 1000,
-  };
 
-  return (
-    <button style={buttonStyle} onClick={onClick}>
-      Sticky Button
-    </button>
-  );
-};
 
 export default function Offers() {
   const location = useLocation();
   const { t } = useTranslation();
-  const [isSliderOpen, setIsSliderOpen] = useState(false);
 
   //IMPORTANT: ADD IN EVERY COMPONENT THE FOLLOWING CODE:
   /* Scroll to the top on component render */
@@ -74,9 +55,6 @@ export default function Offers() {
   }, [location]);
 
 
-  const toggleSlider = () => {
-    setIsSliderOpen(!isSliderOpen);
-  };
 
 
   return (
@@ -308,13 +286,8 @@ export default function Offers() {
         showFavoriteButton={true}
       />
 
-      <StickyButton onClick={toggleSlider} />
-      <div className={`slider ${isSliderOpen ? "open" : ""}`}>
-        <button className="close-button" onClick={toggleSlider}>
-          Close
-        </button>
-        {/* Add your slider content here */}
-      </div>
+<StickySliderButton />
+      
     </>
   );
 }
