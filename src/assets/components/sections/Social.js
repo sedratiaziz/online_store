@@ -18,7 +18,7 @@ function Categ(props) {
                             <div className="card-body">
                                 <h3 className="card-title py-3">{props.thirdCardTitle}</h3>
                                 <hr></hr>
-                                <Link to="/404">
+                                <Link to={`${props.firstCardLink}`}>
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover bn28">{props.thirdCardButton}</button>
                                 </Link>
                             </div>
@@ -31,7 +31,7 @@ function Categ(props) {
                             <div className="card-body">
                                 <h3 className="card-title py-3">{props.secondCardTitle}</h3>
                                 <hr></hr>
-                                <Link to="/404">
+                                <Link to={`${props.secondCardLink}`}>
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover bn25snp">{props.secondCardButton}</button>
                                 </Link>
                             </div>
@@ -44,7 +44,7 @@ function Categ(props) {
                             <div className="card-body">
                                 <h3 className="card-title py-3">{props.firstCardTitle}</h3>
                                 <hr></hr>
-                                <Link to="/404">
+                                <Link to={`${props.thirdCardLink}`}>
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover bn25">{props.firstCardButton}</button>
                                 </Link>
                             </div>
@@ -58,7 +58,7 @@ function Categ(props) {
                             <div className="card-body">
                                 <h3 className="card-title py-3 telegram_h3">{props.fourthCardMdTitle}</h3>
                                 <hr id="hr_kids"></hr>
-                                <Link to="/404">
+                                <Link to={`${props.fourthCardLink}`}>
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover islamic">{props.fourthCardMdButton}</button>
                                 </Link>
                             </div>
@@ -75,7 +75,7 @@ function Categ(props) {
                             <div className="card-body">
                                 <h3 className="card-title py-3 telegram_h3">{props.fourthCardTitle}</h3>
                                 <hr id="hr_sci-fi"></hr>
-                                <Link to="/404">
+                                <Link to={`${props.fourthCardLink}`}>
                                     <button style={{ fontSize: "1.1rem" }} className="bn632-hover islamic">{props.fourthCardButton}</button>
                                 </Link>
                             </div>

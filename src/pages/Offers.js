@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -22,9 +22,37 @@ import rayban from "../assets/img/rayban.jpg";
 import rubiks from "../assets/img/rubiks.jpg";
 import logitech_kbd from "../assets/img/logitech_kbd.jpg";
 
+import visionpro from "../assets/img/visionpro.jpg";
+import gamepass from "../assets/img/gamepass.jpg";
+import roadkit from "../assets/img/roadkit.jpg";
+
+
+const StickyButton = ({ onClick }) => {
+  const buttonStyle = {
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    backgroundColor: '#007BFF',
+    color: 'white',
+    border: 'none',
+    padding: '10px 20px',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    zIndex: 1000,
+  };
+
+  return (
+    <button style={buttonStyle} onClick={onClick}>
+      Sticky Button
+    </button>
+  );
+};
+
 export default function Offers() {
   const location = useLocation();
   const { t } = useTranslation();
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
+
   //IMPORTANT: ADD IN EVERY COMPONENT THE FOLLOWING CODE:
   /* Scroll to the top on component render */
   useEffect(() => {
@@ -44,6 +72,12 @@ export default function Offers() {
       }
     }
   }, [location]);
+
+
+  const toggleSlider = () => {
+    setIsSliderOpen(!isSliderOpen);
+  };
+
 
   return (
     <>
@@ -80,7 +114,7 @@ export default function Offers() {
             </div>
 
             <div className="pt-5 pt-lg-5 mt-lg-3 pt-md-3 pt-sm-3 text-center">
-              <a href="#most_selling_offerpg">
+              <a href="#new_arrival">
                 <button
                   id="salesbtn"
                   className={`bn632-hoversales bn25sales`}
@@ -93,6 +127,42 @@ export default function Offers() {
           </div>
         </div>
       </section>
+
+      <Categ
+        id="new_arrival"
+        mainTitle={"وصل حديثاََ"}
+        src1={visionpro}
+        src2={gamepass}
+        src3={roadkit}
+        cardTitle1="أبل فيجن برو"
+        cardP1="نظارة آبل فيجن برو تجمع بين التكنولوجيا المتقدمة والتصميم الأنيق. الابتكار في فيجن برو لا يقتصر على العرض المرئي فقط، بل يتضمن أيضًا تقنيات متقدمة."
+        cardP1_detail="القطع المتبقية: 65 | التقييمات: 10/9.5"
+        show_cardP1_detail={true}
+        btn1Body={"3,499$"}
+        btn1BodyFvrt={"إضافة للمفضلة"}
+        btn1Style={"bn25c"}
+        btn1StyleFvrt={"bn24"}
+        cardTitle2="إكس بوكس قيم باس - 3 أشهر"
+        cardP2=" مصنوع من قماش قطن ناعم وقابل للتنفس. يتميز بقصة تناسب جميع الأجسام، ويأتي بلون أزرق ملكي يتناسب مع جميع المناسبات"
+        cardP2_detail="القطع المتبقية: 12 | التقييمات: 10/7"
+        show_cardP2_detail={true}
+        btn2Body={"24.99$"}
+        btn2BodyFvrt={"إضافة للمفضلة"}
+        btn2Style={"bn25c"}
+        btn2StyleFvrt={"bn24"}
+        cardTitle3="عدة المساعدة في الطريق"
+        cardP3="محرك مخصص بتمدد عالٍ من تصميم Apple مع مضخم صوت مخصص بنطاق ديناميكي عالٍ وميزة إلغاء الضجيج النشط."
+        cardP3_detail="القطع المتبقية: 15 | التقييمات: 10/8"
+        show_cardP3_detail={true}
+        btn3Body="49.99$"
+        btn3BodyFvrt={"إضافة للمفضلة"}
+        btn3Style={"bn25c"}
+        btn3StyleFvrt={"bn24"}
+        link1="/ShoppingCart"
+        link2="/ShoppingCart"
+        link3="/ShoppingCart"
+        showFavoriteButton={true}
+      />
 
       <Categ
         id="most_selling_offerpg"
@@ -203,6 +273,7 @@ export default function Offers() {
       />
 
       <Categ
+        id="rolx_gmng_mntr"
         mainTitle={""}
         src1={rolexYM}
         src2={gaming_chair}
@@ -236,6 +307,14 @@ export default function Offers() {
         link3="/ShoppingCart"
         showFavoriteButton={true}
       />
+
+      <StickyButton onClick={toggleSlider} />
+      <div className={`slider ${isSliderOpen ? "open" : ""}`}>
+        <button className="close-button" onClick={toggleSlider}>
+          Close
+        </button>
+        {/* Add your slider content here */}
+      </div>
     </>
   );
 }

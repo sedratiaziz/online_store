@@ -2,6 +2,42 @@
   border: solid 3px red;
 }    */
 
+.slider {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 59, 59, 0.05);  
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(17px);  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1050;
+}
+
+
+.slider.open {
+  transform: translateX(0);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
 .h101{
   display: flex;
   justify-content: center;
