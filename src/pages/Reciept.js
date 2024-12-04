@@ -12,7 +12,7 @@ export default function Reciept() {
             <div className={styles.LogIn__contact_box}>                            
                 <div className={styles.LogIn__right}>
                     <h2 className={styles.LogIn__h2}>الفاتورة</h2>
-                    <form data-netlify="true">
+                    <form>
                         <h5>إسم العميل</h5>
                         <p>Mohammed Ali Klay</p>
 
