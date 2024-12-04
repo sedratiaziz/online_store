@@ -20,9 +20,10 @@ export default function Payment() {
       logIn={t("logIn")}
       settings={t("settings")}
       />
-      <section id="" className="py-5">
+      
+      {/* <section id="" className="py-5">
   <div className="container">
-    {/* FIRST ROW */}
+   
     <div className="row d-flex justify-content-center row-whith-wide-cards text-center pt-4 py-md-2 py-lg-2">
       <div id="h10" className="hidden col col-6 col-lg-3 col-md-4 py-3">
         <div className="card h-100 shadow" id="action">
@@ -63,7 +64,6 @@ export default function Payment() {
         </div>
       </div>
 
-      {/* visible only on md screens */}
       <div id="h10" className="hidden d-md-none d-lg-block d-sm-block col col-6 col-lg-3 col-md-4 py-3">
         <div className="card h-100 shadow" id="kids">
           <img alt="anotherimg"  id="kids_img" className="card-img-top" />
@@ -77,9 +77,6 @@ export default function Payment() {
         </div>
       </div>
     </div>
-    {/* FIRST ROW */}
-
-    {/* SECOND ROW */}
     <div className="row row-whith-wide-cards d-flex justify-content-center text-center py-2">
       <div id="h10" className="hidden d-none d-lg-none d-md-block col col-6 col-lg-3 col-md-6 py-3">
         <div className="card h-100 shadow" id="kids">
@@ -94,9 +91,8 @@ export default function Payment() {
         </div>
       </div>
     </div>
-    {/* SECOND ROW */}
   </div>
-</section>
+</section> */}
 
     </>     
   )
