@@ -3,7 +3,6 @@ import React from 'react'
 import '../../locales/i18n';
 import { useTranslation } from 'react-i18next';
 
-import { Link } from 'react-router-dom';
 import Navbar from '../../assets/components/Navbar'
 
 export default function Payment() {
