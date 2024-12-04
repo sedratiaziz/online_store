@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../assets/css/LogIn.module.css'; // Import the CSS module
-import { Link } from 'react-router-dom';
 import CartItems from '../assets/components/CartItems';
 
 export default function ShoppingCart() {
@@ -9,7 +8,6 @@ export default function ShoppingCart() {
 
 <CartItems
   id="new_arrival"
-  mainTitle="سلتك"
   cardTitle3="عدة المساعدة في الطريق"
   cardP3_detail="عدد القطع:  | رسوم الشحن: $6.89"
   show_cardP3_detail={true}
@@ -28,6 +26,7 @@ export default function ShoppingCart() {
   link4=""
   continueButton={"المتابعة"}
   continueButtonLink={'/Delivery'}
+  showHomeButton={true}
   homeButton={"الصفحة الرئيسية"}
   showFavoriteButton={true}
 />

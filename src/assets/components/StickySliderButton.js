@@ -22,7 +22,6 @@ const StickySliderButton = () => {
         </button>
         <CartItems
           id="new_arrival"
-          mainTitle="سلتك"
           cardTitle3="عدة المساعدة في الطريق"
           cardP3_detail="عدد القطع:  | رسوم الشحن: $6.89"
           show_cardP3_detail={true}
@@ -40,7 +39,8 @@ const StickySliderButton = () => {
           btn4StyleFvrt={"bn24"}
           link4=""
           continueButton={"المتابعة"}
-          showHomeButton={"الصفحة الرئيسية"}
+          continueButtonLink={"/Delivery"}
+          showHomeButton={false}
           showFavoriteButton={true}
         />
       </div>

@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 function CartItems(props) {
   const [count, setCount] = useState(0);
 
-  const handleFavoriteClick = () => {
-    alert("تمت إضافة المنتج إلى المفضلة!");
-  };
 
   const increment = () => {
     setCount(count + 1);
@@ -88,7 +85,7 @@ function CartItems(props) {
             <button className="counterBtn" onClick={increment2}>+</button>
           </div>
           
-       
+     
         <Link to={`${props.link4}`}>
                   <button
                     style={{ fontSize: "1.1rem" }}
@@ -110,11 +107,13 @@ function CartItems(props) {
             </button>
             </Link>
             
+            {props.showHomeButton && (
             <Link to={'/'}>
             <button style={{ fontSize: "1.1rem" }} className={`bn632-hover bn26`}>
             {props.homeButton}
             </button>
             </Link>
+            )}
           </div>
 
 

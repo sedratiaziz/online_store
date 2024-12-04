@@ -1,5 +1,4 @@
 import React from "react";
-import CartItems from "../assets/components/CartItems";
 import styles from '../assets/css/LogIn.module.css'
 import { Link } from "react-router-dom";
 
