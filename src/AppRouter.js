@@ -11,9 +11,9 @@ import Offers from './pages/Offers';
 import Profile from './pages/settings/Profile';
 import Orders from './pages/settings/Profile';
 import Language from './pages/settings/Language';
-import Payment from './pages/settings/Profile';
-import Notifications from './pages/settings/Profile';
-import Dashboard from './pages/settings/Profile';
+import Payment from './pages/settings/Payment';
+import Notifications from './pages/settings/Notifications';
+import Dashboard from './pages/settings/Dashboard';
 
 
 import Empty from './pages/Empty';

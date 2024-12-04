@@ -9,7 +9,6 @@ import OrderTracking from '../../assets/img/Mohamed_a_Rahman.png'
 import language from '../../assets/img/language.png'
 import payment from '../../assets/img/payment.png'
 import Notifications from '../../assets/img/bell.png'
-import Dashboard from '../../assets/img/sellerDashboard.svg'
 import Navbar from '../../assets/components/Navbar'
 
 export default function Dashboard() {
