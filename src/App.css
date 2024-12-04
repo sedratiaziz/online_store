@@ -1364,3 +1364,13 @@ body {
 #bazariaImgLink:hover {
   text-decoration: none;
 }
+
+
+.counterBtn {
+  margin-right: 10px;
+  margin-left: 10px;
+  transform: scale(1.2);
+  border: none;
+  border-radius: 15px;
+  font-size: 1.125rem;
+}

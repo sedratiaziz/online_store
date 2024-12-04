@@ -19,6 +19,8 @@ import Dashboard from './pages/settings/Profile';
 import Empty from './pages/Empty';
 
 import './assets/fonts/fonts.css';
+import Reciept from './pages/Reciept';
+import Delivery from './pages/Delivery';
 
 
 const AppRouter = () => {
@@ -38,6 +40,9 @@ const AppRouter = () => {
          <Route path="/Settings/Payment" element={<Payment />} />
          <Route path="/Settings/Notifications" element={<Notifications />} />
          <Route path="/Settings/Dashboard" element={<Dashboard />} />
+         
+         <Route path="/Reciept" element={<Reciept />} />
+         <Route path="/Delivery" element={<Delivery />} />
 
         <Route path="/404" element={<Empty />} />              
       </Routes>
