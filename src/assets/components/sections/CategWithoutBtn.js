@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function CategWithoutBtn(props) {
   const handleFavoriteClick = () => {
@@ -38,9 +37,8 @@ function CategWithoutBtn(props) {
                   >
                     {props.cardP1_detail}
                   </p>
-                  
                 )}
-              
+
                 {props.showFavoriteButton && (
                   <button
                     style={{ fontSize: "1.1rem" }}
@@ -83,7 +81,7 @@ function CategWithoutBtn(props) {
                     {props.cardP2_detail}
                   </p>
                 )}
-              
+
                 {props.showFavoriteButton && (
                   <button
                     style={{ fontSize: "1.1rem" }}
@@ -123,7 +121,7 @@ function CategWithoutBtn(props) {
                     {props.cardP3_detail}
                   </p>
                 )}
-               
+
                 {props.showFavoriteButton && (
                   <button
                     style={{ fontSize: "1.1rem" }}
