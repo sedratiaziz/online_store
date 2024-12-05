@@ -29,33 +29,6 @@ export default function Settings() {
 
       <Categ 
         id="what_makes_us_unique"      
-      
-        src1={profilePic}
-        src2={OrderTracking}
-        src3={language}
-
-        cardTitle1={t("profile")}
-        cardP1={t("profileDescription")}
-        btn1Body={t("goToSetting")}
-        btn1Style="bn25c"
-
-        cardTitle2={t("orderHistory")}
-        cardP2={t("orderHistoryDescription")}
-        btn2Body={t("goToSetting")}
-        btn2Style="bn25w"
-
-        cardTitle3={t("language")}
-        cardP3={t("languageDescription")}
-        btn3Body={t("goToSetting")}
-        btn3Style="bn25turqoise"
-
-        link1="/Settings/Profile"
-        link2="/Settings/Orders"
-        link3="/Settings/Language"
-        showFavoriteButton={false}
-      /> 
-      <Categ 
-        id="what_makes_us_unique"      
 
         src1={payment}
         src2={Notifications}
@@ -81,6 +54,34 @@ export default function Settings() {
         link3="/Settings/Dashboard"
         showFavoriteButton={false}
       />
+      <Categ 
+        id="what_makes_us_unique"      
+      
+        src1={profilePic}
+        src2={OrderTracking}
+        src3={language}
+
+        cardTitle1={t("profile")}
+        cardP1={t("profileDescription")}
+        btn1Body={t("goToSetting")}
+        btn1Style="bn25c"
+
+        cardTitle2={t("orderHistory")}
+        cardP2={t("orderHistoryDescription")}
+        btn2Body={t("goToSetting")}
+        btn2Style="bn25w"
+
+        cardTitle3={t("language")}
+        cardP3={t("languageDescription")}
+        btn3Body={t("goToSetting")}
+        btn3Style="bn25turqoise"
+
+        link1="/Settings/Profile"
+        link2="/Settings/Orders"
+        link3="/Settings/Language"
+        showFavoriteButton={false}
+      /> 
+      
     </>     
   )
 }

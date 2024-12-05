@@ -1,86 +1,56 @@
-import React from 'react'
-import Categ from '../../assets/components/sections/Categ'
+import React from "react";
+import Categ from "../../assets/components/sections/Categ";
 
-import '../../locales/i18n';
-import { useTranslation } from 'react-i18next';
+import "../../locales/i18n";
+import { useTranslation } from "react-i18next";
 
-import profilePic from '../../assets/img/profile.png'
-import OrderTracking from '../../assets/img/Mohamed_a_Rahman.png'
-import language from '../../assets/img/language.png'
-import payment from '../../assets/img/payment.png'
-import Notifications from '../../assets/img/bell.png'
-import Dashboard from '../../assets/img/sellerDashboard.svg'
-import Navbar from '../../assets/components/Navbar'
+import Navbar from "../../assets/components/Navbar";
+
+import accInfo from '../../assets/img/accInfo.png'
+import delvAddress from '../../assets/img/delvAddress.jpg'
+import bio from '../../assets/img/bio.jpg'
+
 
 export default function Profile() {
   const { t } = useTranslation();
-  
+
   return (
     <>
-    <Navbar 
-      logoLink={"/"}
-      title={t("BazariaNav")}
-      searchPlaceHolder={t("searchPlaceHolder")}
-      offers={t("offers")}
-      shoppingCart={t("shoppingCart")}
-      logIn={t("logIn")}
-      settings={t("settings")}
+      <Navbar
+        logoLink={"/"}
+        title={t("BazariaNav")}
+        searchPlaceHolder={t("searchPlaceHolder")}
+        offers={t("offers")}
+        shoppingCart={t("shoppingCart")}
+        logIn={t("logIn")}
+        settings={t("settings")}
       />
 
-      <Categ 
-        id="what_makes_us_unique"      
+      <br></br>
+      <br></br>
+
+      <Categ
+        id="what_makes_us_unique"
       
-        src1={profilePic}
-        src2={OrderTracking}
-        src3={language}
+src1={bio}
+src2={delvAddress}
+src3={accInfo}
 
-        cardTitle1={t("profile")}
-        cardP1={t("profileDescription")}
-        btn1Body={t("goToSetting")}
-        btn1Style="bn25c"
-
-        cardTitle2={t("orderHistory")}
-        cardP2={t("orderHistoryDescription")}
-        btn2Body={t("goToSetting")}
-        btn2Style="bn25w"
-
-        cardTitle3={t("language")}
-        cardP3={t("languageDescription")}
-        btn3Body={t("goToSetting")}
+        mainTitle="!حسابك، على مزاجك"
+        cardTitle1={"بايو"}
+        btn1Body={"اختر"}
+        btn1Style="bn25w"
+        cardTitle2={"عنوان التوصيل"}
+        btn2Body={"اختر"}
+        btn2Style="bn25turqoise"
+        cardTitle3={"معلومات الحساب"}
+        btn3Body={"اختر"}
         btn3Style="bn25turqoise"
-
-        link1="/"
-        link2="/"
-        link3="/"
-        showFavoriteButton={false}
-      /> 
-      <Categ 
-        id="what_makes_us_unique"      
-
-        src1={payment}
-        src2={Notifications}
-        src3={Dashboard}
-
-        cardTitle1={t("payment")}
-        cardP1={t("paymentMethodsDescription")}
-        btn1Body={t("goToSetting")}
-        btn1Style="bn25c"
-
-        cardTitle2={t("notifications")}
-        cardP2={t("notificationsDescription")}
-        btn2Body={t("goToSetting")}
-        btn2Style="bn25red"
-
-        cardTitle3={t("dashboard")}
-        cardP3={t("dashboardDescription")}
-        btn3Body={t("goToSetting")}
-        btn3Style="bn25l"
-
-        link1="/"
-        link2="/"
-        link3="/"
+        link1="/Settings/Bio"
+        link2="/Settings/ProfileSetting"
+        link3="/Settings/YourName"
         showFavoriteButton={false}
       />
-    </>     
-  )
+    </>
+  );
 }

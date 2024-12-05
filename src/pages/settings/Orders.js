@@ -1,15 +1,9 @@
 import React from 'react'
-import Categ from '../../assets/components/sections/Categ'
-
+import styles from '../../assets/css/LogIn.module.css'
+import { Link } from 'react-router-dom';
 import '../../locales/i18n';
 import { useTranslation } from 'react-i18next';
 
-import profilePic from '../../assets/img/profile.png'
-import OrderTracking from '../../assets/img/Mohamed_a_Rahman.png'
-import language from '../../assets/img/language.png'
-import payment from '../../assets/img/payment.png'
-import Notifications from '../../assets/img/bell.png'
-import Dashboard from '../../assets/img/sellerDashboard.svg'
 import Navbar from '../../assets/components/Navbar'
 
 export default function Orders() {
@@ -27,60 +21,46 @@ export default function Orders() {
       settings={t("settings")}
       />
 
-      <Categ 
-        id="what_makes_us_unique"      
-      
-        src1={profilePic}
-        src2={OrderTracking}
-        src3={language}
 
-        cardTitle1={t("profile")}
-        cardP1={t("profileDescription")}
-        btn1Body={t("goToSetting")}
-        btn1Style="bn25c"
-
-        cardTitle2={t("orderHistory")}
-        cardP2={t("orderHistoryDescription")}
-        btn2Body={t("goToSetting")}
-        btn2Style="bn25w"
-
-        cardTitle3={t("language")}
-        cardP3={t("languageDescription")}
-        btn3Body={t("goToSetting")}
-        btn3Style="bn25turqoise"
-
-        link1="/"
-        link2="/"
-        link3="/"
-        showFavoriteButton={false}
-      /> 
-      <Categ 
-        id="what_makes_us_unique"      
-
-        src1={payment}
-        src2={Notifications}
-        src3={Dashboard}
-
-        cardTitle1={t("payment")}
-        cardP1={t("paymentMethodsDescription")}
-        btn1Body={t("goToSetting")}
-        btn1Style="bn25c"
-
-        cardTitle2={t("notifications")}
-        cardP2={t("notificationsDescription")}
-        btn2Body={t("goToSetting")}
-        btn2Style="bn25red"
-
-        cardTitle3={t("dashboard")}
-        cardP3={t("dashboardDescription")}
-        btn3Body={t("goToSetting")}
-        btn3Style="bn25l"
-
-        link1="/"
-        link2="/"
-        link3="/"
-        showFavoriteButton={false}
-      />
+<section className={`py-5 d-flex align-items-center ${styles.LogIn__container}`}>              
+            <div className={styles.LogIn__contact_box}>                            
+                <div className={styles.LogIn__right}>
+                    <h2 className={styles.LogIn__h2}>لديك 3 طلبات حالية</h2>
+                    <form data-netlify="true">
+                        
+                        <input
+                            type="text"
+                            name="email"
+                            className={styles.LogIn__field}
+                            placeholder="رايبون 02 أمريكي: وصل المنتج لميناء الشحن، أمس في الساعة 5 مساءاََ"
+                            readOnly
+                        />
+                        <input
+                            type="text"
+                            name="email"
+                            className={styles.LogIn__field}
+                            placeholder="ساعة رولكس: خرج المنتج للتو من مركز فرز البضائع"
+                            readOnly
+                        />
+                        <input
+                            type="text"
+                            name="email"
+                            className={styles.LogIn__field}
+                            placeholder="!عدة المساعدة في الطريق: المنتج في طريقه إليك"
+                            readOnly
+                        />
+                       
+                        <Link to={'/'}>
+                        <button className={`${styles.LogIn__btn1} mt-3`}>الصفحة الرئيسية</button>
+                        </Link>
+                        <div className={`${styles.LogIn__rowDiv} mt-3`}>                        
+                        </div>                        
+                    </form>
+                   
+                </div>
+            </div>
+        </section>
+     
     </>     
   )
 }

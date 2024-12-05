@@ -25,6 +25,7 @@ import ribon from "../assets/img/ribon.jpeg";
 import royalBlueTshirt from "../assets/img/royalblueTshirt.png";
 import airpods from "../assets/img/airpods.jpg";
 import StickySliderButton from "../assets/components/StickySliderButton";
+import Footer from "../assets/components/Footer";
 
 const arrowElement = (
   <div className="d-flex flex-column justify-content-between pt-5 d-none d-sm-block d-sm-none d-md-block">
@@ -172,6 +173,7 @@ function Home() {
 
       <StickySliderButton />
 
+      <Footer />
     </>
   );
 }
